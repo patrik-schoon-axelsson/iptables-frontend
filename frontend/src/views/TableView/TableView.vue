@@ -1,8 +1,22 @@
 <template>
-  <div class="container">
+  <div>
       <h3 class="center-align"> {{chain[0].chain}} chain</h3>
     <hr>
-    <table>
+    <table class="highlight striped responsive-table">
+      <thead> 
+        <tr>
+          <th v-for="(key, val) in chain[0].rules[0]" :key="val">
+            {{ val }}
+          </th> 
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in chain[0].rules" :key="item.chain">
+          <td v-for="(val, key) in item" :key="key">
+              {{ val }}           
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>

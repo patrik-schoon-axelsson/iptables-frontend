@@ -1,8 +1,8 @@
 <template>
-<section>
-  <nav class="grey darken-3">
+<section class="navbar-fixed">
+  <nav class="grey darken-2">
     <div class="nav-wrapper">
-      <router-link to="/" class="brand-logo center">IPTables Dashboard v2.0</router-link>
+      <router-link to="/" class="brand-logo">IPTables Dashboard v2.0</router-link>
       <ul id="nav-mobile" class="right">
         <li><router-link to="/about">About</router-link></li>
       <!-- Dropdown Trigger -->
@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import M from 'materialize-css';
 import { mapState } from 'vuex';
 
 export default { 

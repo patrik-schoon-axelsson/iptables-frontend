@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
       <h3 class="center-align"> {{chain[0].chain}} chain</h3>
       <br>
       <canvas id="chainChart"></canvas>

@@ -1,7 +1,5 @@
 <template>
-<div class="container">
-  <h4 class="center-align">Iptables Dashboard v2.0</h4>
-  <br>
+<div>
   <p class="flow-text">
     Use the navigation above to select a Chain to chart. Further options will become available as the project develops.
   </p>
