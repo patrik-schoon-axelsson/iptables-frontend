@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import ChartView from '../views/ChartView/ChartView.vue'
 import ChartDefault from '../views/ChartView/ChartDefault.vue'
+import TableDefault from '../views/TableView/TableDefault.vue'
+import TableView from '../views/TableView/TableView.vue'
 
 const routes = [
   {
@@ -14,9 +16,21 @@ const routes = [
       component: ChartDefault
     },{
       name: 'chart',
-      path: '/:chainID',
+      path: 'chart/:chainID',
       component: ChartView
     }]
+  },
+  {
+    path: '/table',
+    name: 'table_default',
+    component: TableDefault,
+    children: [
+      {
+        name: 'table',
+        path: '/table/:chainID',
+        component: TableView
+      }
+    ]
   },
   {
     path: '/about',

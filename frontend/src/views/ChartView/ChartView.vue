@@ -2,9 +2,6 @@
   <div class="container">
       <h3 class="center-align"> {{chain[0].chain}} chain</h3>
       <br>
-      <p class="center-align">
-        ...
-      </p>
       <canvas id="chainChart"></canvas>
   </div>
 </template>
@@ -46,7 +43,6 @@ export default {
   },
   mounted() {
       this.chartSetup();
-      console.log(this.chart);
   }, 
   methods: {
     chartSetup() {

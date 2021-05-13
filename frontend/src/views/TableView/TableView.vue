@@ -8,10 +8,25 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
     name: 'TableView',
+    data(){
+      return {
+        id: this.$route.params.chainID
+      }
+    },
+    computed: {
+    ...mapState(['fetchCache']),
+    chain() {
+      return this.fetchCache.filter(item => item.chain == this.id)
+    },
+  },
+  beforeRouteUpdate(to, from){
+    this.id = to.params.chainID;
     
-
+  }
 }
 </script>
 

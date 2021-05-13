@@ -1,8 +1,15 @@
 <template>
-  <div class="home">
-    <div class="row">
-     <router-view key="$route.param.chainID"></router-view>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li v-for="item in fetchCache" :key="item.chain" class="tab col s3">
+          <router-link :to="{ name: 'chart', params: { chainID: item.chain }}">{{item.chain}}</router-link>
+      </li>
+      </ul>
     </div>
+  <router-view key="$route.param.chainID"></router-view>
+  </div>
 </div>
 </template>
 

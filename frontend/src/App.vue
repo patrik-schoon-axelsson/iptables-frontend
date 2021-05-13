@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import M from 'materialize-css';
 import { mapState } from 'vuex';
 import store from './store/'
 
@@ -31,13 +32,13 @@ export default{
     })
     .finally(() => {
       this.isLoading = false;
-      console.log(this.$store)
+      M.AutoInit();
     })
     .catch((error) => {
       console.log(error)
       this.isLoading = false;
       this.error = error
-      })
+    })
   },
   methods: {
 
