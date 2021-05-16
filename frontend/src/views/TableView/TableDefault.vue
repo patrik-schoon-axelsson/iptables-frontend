@@ -4,9 +4,9 @@
   <h3 class="center-align">Table View</h3>
     <br>
   <div class="row">
-    <ul class="tabs grey darken-1">
+    <ul class="tabs white">
       <li v-for="item in fetchCache" :key="item.chain" class="tab col s3">
-          <router-link class="white-text" :to="{ name: 'table', params: { chainID: item.chain }}">{{item.chain}}</router-link>
+          <router-link class="black-text" :to="{ name: 'table', params: { chainID: item.chain }}">{{item.chain}}</router-link>
       </li>
     </ul>
     <p class="flow-text">

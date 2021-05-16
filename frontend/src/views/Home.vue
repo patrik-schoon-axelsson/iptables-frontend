@@ -6,9 +6,9 @@
   </div>
   <div class="row">
     <div class="col s12">
-      <ul class="tabs grey darken-1">
+      <ul class="tabs white">
         <li v-for="item in fetchCache" :key="item.chain" class="tab col s3">
-          <router-link class="white-text" :to="{ name: 'chart', params: { chainID: item.chain }}">{{item.chain}}</router-link>
+          <router-link class="black-text" :to="{ name: 'chart', params: { chainID: item.chain }}">{{item.chain}}</router-link>
       </li>
       </ul>
     </div>
