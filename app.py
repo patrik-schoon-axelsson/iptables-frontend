@@ -1,17 +1,19 @@
 import os
 import json
+import jc.parsers.iptables
 from flask import Flask, jsonify
 
 app = Flask(__name__, static_folder='./static/build', static_url_path="/")
 
-iptables = json.loads(open('static/iptables.json').read())
+iptables = jc.parsers.iptables.parse(os.system("sudo iptables --list-rules"))
 
 @app.route('/api/all')
 def method_name():
    # Dummy API, serves the JSON dump found in the static directory. It needs to be
    # re-serialized with the jsonify function in order to be served on the http://localhost:5000/api/all
    # endpoint. 
-   
+    print(iptables)
+
     return jsonify(iptables)
 
 @app.route('/')
