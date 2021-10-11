@@ -20,7 +20,7 @@ Requires Python 3 for the Flask dummy backend and a running install of NodeJS[ht
 
 Currently, the Frontend is not built. Once finished, a standard /dist build with minified static files will be available, at which point you can direct app.py to serve frontend/dist/index.html. To run the dev server, follow these instructions.
 
-1. Activate a venv (python3-venv) and install all packages in requirements.txt (``sudo pip install -r requirements.txt)
+1. Activate a venv (python3-venv) and install all packages in requirements.txt (`sudo pip install -r requirements.txt`)
 2. Launch the dummy backend with either `flask run` or simply `python3 app.py`
 3. Start a new terminal and cd into the frontend directory.
 4. Use the npm `npm run serve` command from the Vue CLI to compile and launch the dev sever.
