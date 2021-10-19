@@ -25,4 +25,16 @@ Currently, the Frontend is not built. Once finished, a standard /dist build with
 3. Start a new terminal and cd into the frontend directory.
 4. Use the npm `npm run serve` command from the Vue CLI to compile and launch the dev sever.
 
+### Example installation
+
+```bash
+sudo apt update
+sudo apt install nodejs python3 python3-pip 
+sudo npm install -g vue vue-axios chart.js
+sudo pip3 install flask venv
+python3 -m venv iptables-dashboard/
+git clone https://github.com/patrik-schoon-axelsson/iptables-frontend
+sudo pip install -r requiremnts.txt
+```
+
 Troubleshooting: If you're having trouble accessing the dummy API from the frontend, make sure the app is served on port 5000. If 5000 is unavailable, adjust the Flask APIs port and then adjust vue.config.js
